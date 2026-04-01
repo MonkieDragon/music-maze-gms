@@ -31,24 +31,42 @@
         padding: 0;
         overflow: hidden;
         background: black;
+        width: 100%;
+        height: 100%;
       }
 
+      /* Main GameMaker container */
+      .gm4html5_div_class {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Canvas scaling (no stretching, no overflow) */
       canvas {
         image-rendering: optimizeSpeed;
         -webkit-interpolation-mode: nearest-neighbor;
         -ms-touch-action: none;
         touch-action: none;
-        margin: 0px;
-        padding: 0px;
-        border: 0px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100vw;
-        height: auto;
-        max-height: 100vh;
+
+        margin: 0;
+        padding: 0;
+        border: 0;
+
+        width: auto;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+
+        display: block;
+        background: black;
       }
+
+      /* Fullscreen support */
       :-webkit-full-screen #canvas {
         width: 100%;
         height: 100%;
@@ -58,20 +76,7 @@
         height: 100%;
       }
 
-      /* Custom Runner Styles */
-      .gm4html5_div_class,
-      .gm4html5_div_class > div {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      div.gm4html5_div_class {
-        margin: 0px;
-        padding: 0px;
-        border: 0px;
-      }
+      /* Keep default runner UI styles */
       div.gm4html5_login {
         padding: 20px;
         position: absolute;
@@ -90,7 +95,6 @@
       div.gm4html5_login_header {
         text-align: center;
       }
-      /* END - Custom Runner Styles */
     </style>
 
     <!-- Custom PostStyle code is injected here -->
