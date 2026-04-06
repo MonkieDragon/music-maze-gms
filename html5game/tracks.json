@@ -1,7 +1,6 @@
 [
   {
-    "name": "EDM Four On Floor",
-    "suffix": "edm",
+    "name": "EDM",
     "bpm": 128,
     "instruments": [
       {
@@ -44,8 +43,7 @@
   },
 
   {
-    "name": "DNB / HALFTIME",
-    "suffix": "dnb",
+    "name": "HALFTIME D & B",
     "bpm": 86,
 
     "instruments": [
@@ -98,7 +96,6 @@
 
   {
     "name": "HIP HOP",
-    "suffix": "hiphop",
     "bpm": 90,
 
     "instruments": [
@@ -151,7 +148,6 @@
 
   {
     "name": "TRAP",
-    "suffix": "trap",
     "bpm": 86,
 
     "instruments": [
@@ -204,7 +200,6 @@
 
   {
     "name": "TRANCE",
-    "suffix": "trance",
     "bpm": 130,
 
     "instruments": [
@@ -257,7 +252,6 @@
 
   {
     "name": "REGGAE",
-    "suffix": "reggae",
     "bpm": 120,
 
     "instruments": [
@@ -310,7 +304,6 @@
 
   {
     "name": "DANCEHALL",
-    "suffix": "dancehall",
     "bpm": 108,
 
     "instruments": [
@@ -326,7 +319,7 @@
 
       {
         "name": "snare",
-        "pattern": [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0]
+        "pattern": [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0]
       },
 
       {
@@ -363,7 +356,6 @@
 
   {
     "name": "DUBSTEP",
-    "suffix": "dubstep",
     "bpm": 140,
 
     "instruments": [
