@@ -135,7 +135,32 @@
     </script>
 
     <!-- Builtin injector for injecting google analytics code -->
+    <script>
+      function tryResumeAudio() {
+        try {
+          if (typeof g_WebAudioContext !== "undefined") {
+            const ctx = g_WebAudioContext;
 
+            if (ctx.state === "suspended") {
+              ctx.resume();
+
+              // iOS unlock
+              const buffer = ctx.createBuffer(1, 1, 22050);
+              const source = ctx.createBufferSource();
+              source.buffer = buffer;
+              source.connect(ctx.destination);
+              source.start(0);
+            }
+          }
+        } catch (e) {
+          console.log("audio resume error", e);
+        }
+      }
+
+      // Run on every interaction
+      document.addEventListener("touchstart", tryResumeAudio);
+      document.addEventListener("click", tryResumeAudio);
+    </script>
     <!-- Custom BodyEnd code is injected here -->
   </body>
 
